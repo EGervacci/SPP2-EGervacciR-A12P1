@@ -23,6 +23,15 @@ public class SPP2IMC {
         double imc = peso / Math.pow(estatura,2);
         
         JOptionPane.showMessageDialog (null, "Su IMC es igual a: " + imc);
+        
+        if (imc > 25){
+            JOptionPane.showMessageDialog (null, "Estás en sobrepeso");
+        }else if (imc < 18){
+            JOptionPane.showMessageDialog (null, "Estás en desnutrición");
+        }else {
+            JOptionPane.showMessageDialog (null, "Estás en peso normal");
+        }
+        
     }
     public static double solicitaDouble(String mensaje){
         Scanner kb = new Scanner (System.in);
